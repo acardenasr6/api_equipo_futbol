@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  quipo-futbol:
+    container_name: api_equipo_futbol
+    build: .
+    ports:
+      - 31005:8080
