@@ -21,10 +21,13 @@ public class Equipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
     private String city;
+
     @Transient
     private Integer goalsCount;
+
     @CreationTimestamp
     @Column(name = "created_at")
     private Date createdAt;

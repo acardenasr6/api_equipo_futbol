@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface EquipoRepository extends JpaRepository<Equipo, Integer> {
 
     @Query("SELECT e FROM Equipo e WHERE e.name = ?1 and e.city = ?2")
-    Optional<Equipo> findEquipoByUnico(String name, String city);
+    Optional<Equipo> findEquipoUnico(String name, String city);
 }

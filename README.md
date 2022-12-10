@@ -1,14 +1,14 @@
 # API Equipo futbol
 
 >El servicio tiene el `crud` completo de los jugadores y equipos. Además, al consultar el/los equipos devuelve
-el acumulado de los goles de los jugadores.
+el acumulado de los goles por equipo.
 
 
 ### Introducción
 El servicio está construido con `JAVA 11`, `Spring Boot`, Base de datos `H2`, `JPA` y `Docker`.
 
 ### Cómo iniciar con docker
-En orden para iniciar el proyecto:
+El orden para iniciar el proyecto:
 ```bash
 $git clone git@github.com:acardenasr6/api_equipo_futbol.git
 

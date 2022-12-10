@@ -50,7 +50,7 @@ class EquipoServiceImplTest {
 
     @Test
     void registrar() throws ValidationException {
-        when(equipoRepository.findEquipoByUnico(anyString(), anyString())).thenReturn(Optional.empty());
+        when(equipoRepository.findEquipoUnico(anyString(), anyString())).thenReturn(Optional.empty());
         when(equipoRepository.save(any(Equipo.class))).thenReturn(DatosTest.EQUIPO);
         Equipo equipo = equipoService.registrar(DatosTest.EQUIPO);
         assertNotNull(equipo);

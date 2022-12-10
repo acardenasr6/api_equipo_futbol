@@ -63,10 +63,10 @@ public class EquipoServiceImpl implements EquipoService {
                 () -> new ValidationException("¡El campo 'name' es requerido!"));
 
         Optional.ofNullable(equipo.getCity()).orElseThrow(
-                () -> new ValidationException("¡campo 'city' es requerido!"));
+                () -> new ValidationException("¡El campo 'city' es requerido!"));
 
         Optional<Equipo> equipoRegistrado = equipoRepository
-                .findEquipoByUnico(equipo.getName(), equipo.getCity());
+                .findEquipoUnico(equipo.getName(), equipo.getCity());
 
         if (equipoRegistrado.isPresent()){
             throw new ValidationException("¡El equipo ya existe!");

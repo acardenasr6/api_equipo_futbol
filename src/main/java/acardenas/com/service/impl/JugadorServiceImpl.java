@@ -63,10 +63,10 @@ public class JugadorServiceImpl implements JugadorService {
                 () -> new ValidationException("¡El campo 'equipo.id' es requerido!"));
 
         Optional.ofNullable(jugador.getGoals()).orElseThrow(
-                () -> new ValidationException("¡campo 'goals' es requerido!"));
+                () -> new ValidationException("¡El campo 'goals' es requerido!"));
 
         Optional<Jugador> jugadorRegistrado = jugadorRepository
-                .findJugadorByUnico(jugador.getName(), jugador.getEquipo().getId());
+                .findJugadorUnico(jugador.getName(), jugador.getEquipo().getId());
 
         Optional<Equipo> equipo = equipoRepository.findById(jugador.getEquipo().getId());
 

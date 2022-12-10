@@ -15,6 +15,6 @@ public interface JugadorRepository extends JpaRepository<Jugador, Integer> {
     List<Jugador> findJugadorByEquipo(Integer equipoId);
 
     @Query("SELECT j FROM Jugador j WHERE j.name = ?1 and j.equipo.id = ?2")
-    Optional<Jugador> findJugadorByUnico(String name, Integer equipoId);
+    Optional<Jugador> findJugadorUnico(String name, Integer equipoId);
 
 }
